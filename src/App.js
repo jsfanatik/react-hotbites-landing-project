@@ -9,9 +9,9 @@ function NotFound() {
       <div className="hero-section">
         <div className="content-card">
           <img src={logo} alt="HotBites Logo" className="logo" />
-          <h1 className="error-code">404</h1>
+          {/* <h1 className="error-code">404</h1> */}
           <p className="tagline">Oops! Recipe Not Found</p>
-          <p className="error-message">The recipe you're looking for doesn't exist or has been removed.</p>
+          {/* <p className="error-message">The recipe you're looking for doesn't exist or has been removed.</p> */}
           <div className="cta-buttons">
             <button className="primary-button" onClick={() => window.location.href = '/'}>
               Return Home
