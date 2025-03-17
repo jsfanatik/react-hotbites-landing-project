@@ -1,10 +1,16 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -34,5 +40,141 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.hero-section {
+  /* background: linear-gradient(135deg, #FF4B2B, #FF416C); */
+  background: #c93c3c;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: none; /* Hide button on desktop */
+}
+
+.primary-button, .secondary-button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+}
+
+.primary-button {
+  /* background: linear-gradient(135deg, #FF4B2B, #FF416C); */
+  background: #c93c3c;
+  color: white;
+}
+
+.secondary-button {
+  background: white;
+  color: #c93c3c;
+  border: 2px solid #c93c3c;
+}
+
+.primary-button:hover, .secondary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 65, 108, 0.2);
+}
+
+@media (max-width: 768px) {
+  .content-card {
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .primary-button, .secondary-button {
+    width: 100%;
+  }
+}
+
+/* Desktop styles (default) */
+.qr-section {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.qr-code {
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.qr-text {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .qr-section {
+    display: none; /* Hide QR code on mobile */
+  }
+
+  .cta-buttons {
+    display: flex; /* Show button on mobile */
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .content-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .primary-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
   }
 }
