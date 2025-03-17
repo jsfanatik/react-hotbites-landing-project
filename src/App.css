@@ -44,7 +44,6 @@
 }
 
 .hero-section {
-  /* background: linear-gradient(135deg, #FF4B2B, #FF416C); */
   background: #c93c3c;
   min-height: 100vh;
   display: flex;
@@ -96,7 +95,6 @@ h1 {
 }
 
 .primary-button {
-  /* background: linear-gradient(135deg, #FF4B2B, #FF416C); */
   background: #c93c3c;
   color: white;
 }
