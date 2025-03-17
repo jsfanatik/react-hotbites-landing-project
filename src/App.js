@@ -3,17 +3,9 @@ import logo from './assets/hotbites-logo.png';
 import QRCode from 'react-qr-code';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 
-function formatRecipeName(name) {
-  return name
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
 function RecipePage() {
-  const { recipe_name, recipe_id } = useParams();
+  const { recipe_id } = useParams();
   const appUrl = `hotbitesapp://home/recipe/${recipe_id}`;
-  const formattedRecipeName = formatRecipeName(recipe_name);
 
   return (
     <div className="App">
@@ -28,7 +20,7 @@ function RecipePage() {
               level="H"
               className="qr-code"
             />
-            <p className="qr-text">Scan to open <b>{formattedRecipeName}</b> recipe in HotBites app</p>
+            <p className="qr-text">Scan to open in HotBites app</p>
           </div>
           <div className="cta-buttons">
             <button className="primary-button" onClick={() => window.location.href = appUrl}>
@@ -45,7 +37,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/:recipe_name/:recipe_id" element={<RecipePage />} />
+        <Route path="/:recipe_id" element={<RecipePage />} />
       </Routes>
     </Router>
   );
