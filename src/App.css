@@ -176,3 +176,21 @@ h1 {
     font-size: 1.2rem;
   }
 }
+
+.error-code {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 1rem 0 2rem;
+  text-align: center;
+  max-width: 400px;
+  line-height: 1.5;
+}
