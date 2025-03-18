@@ -32,7 +32,7 @@ function RecipePage() {
       <div className="hero-section">
         <div className="content-card">
           <img src={logo} alt="HotBites Logo" className="logo" />
-          <p className="tagline">The ultimate recipe discovery platform!</p>
+          <p className="tagline">View the recipe in the HotBites app!</p>
           <div className="qr-section">
             <QRCode 
               value={appUrl}
@@ -41,10 +41,11 @@ function RecipePage() {
               className="qr-code"
             />
             <p className="qr-text">Scan to open in HotBites app</p>
+            {/* <p className="qr-text">If redirecting from the Pintee</p> */}
           </div>
           <div className="cta-buttons">
             <button className="primary-button" onClick={() => window.location.href = appUrl}>
-              Navigate to the recipe!
+              Let's go!
             </button>
           </div>
         </div>
