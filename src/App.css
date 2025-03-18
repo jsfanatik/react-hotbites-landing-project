@@ -194,3 +194,26 @@ h1 {
   max-width: 400px;
   line-height: 1.5;
 }
+
+.pinterest-mobile-note {
+  display: none; /* Hidden by default on all screens */
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #fff3f3;
+  border-radius: 8px;
+  color: #c93c3c;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Show only on mobile devices */
+@media screen and (max-width: 768px) {
+  .pinterest-mobile-note {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+.pinterest-note {
+  display: none; /* Always hidden - removing redundant styles */
+}

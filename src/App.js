@@ -41,13 +41,15 @@ function RecipePage() {
               className="qr-code"
             />
             <p className="qr-text">Scan to open in HotBites app</p>
-            {/* <p className="qr-text">If redirecting from the Pintee</p> */}
           </div>
           <div className="cta-buttons">
             <button className="primary-button" onClick={() => window.location.href = appUrl}>
               Let's go!
             </button>
           </div>
+          <p className="pinterest-mobile-note">
+            Viewing from Pinterest? Click the three dots and select "Open in browser"
+          </p>
         </div>
       </div>
     </div>
