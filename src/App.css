@@ -13,6 +13,13 @@
   height: 75px;
 }
 
+.instructions-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -82,7 +89,10 @@ h1 {
 }
 
 .cta-buttons {
-  display: none; /* Hide button on desktop */
+  display: none;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .primary-button, .secondary-button {
@@ -161,16 +171,16 @@ h1 {
   }
 
   .cta-buttons {
-    display: flex; /* Show button on mobile */
-    justify-content: center;
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .content-card {
     padding: 2rem 1.5rem;
   }
 
-  .primary-button {
+  .primary-button, .secondary-button {
     width: 100%;
     padding: 1rem;
     font-size: 1.2rem;
@@ -216,4 +226,90 @@ h1 {
 
 .pinterest-note {
   display: none; /* Always hidden - removing redundant styles */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.feature-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.app-link {
+  display: block;
+  margin-top: 1.5rem;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.app-link:hover {
+  color: #c93c3c;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.home-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.instructions {
+  text-align: left;
+  flex: 1;
+}
+
+.instructions h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.instructions p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .home-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .instructions {
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
